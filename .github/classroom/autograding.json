@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "compile",
+      "setup": "",
+      "run": "sudo apt install -y openjdk-17-jdk && export PATH=\"/usr/lib/jvm/java-17-openjdk-amd64/bin/:$PATH\" && mvn --version && mvn compile",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "spring run output",
+      "setup": "",
+      "run": "sudo apt install -y openjdk-17-jdk && export PATH=\"/usr/lib/jvm/java-17-openjdk-amd64/bin/:$PATH\" && mvn --version && mvn spring-boot:start && mvn spring-boot:stop",
+      "input": "",
+      "output": "running for",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 7
+    }
+  ]
+}
